@@ -1,6 +1,6 @@
 cask "tatamio" do
   version "0.12.0"
-  sha256 "494007321de20fd92c445540e50e03435e97488896424a3e4d18f708aa233ee7"
+  sha256 "6fb2df4205634ad1cf46d403d39587986148383a8fd5aa65aeccd1479b461ca4"
 
   url "https://tatamio.app/downloads/Tatamio-#{version}.dmg"
   name "Tatamio"
