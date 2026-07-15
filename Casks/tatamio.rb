@@ -7,7 +7,7 @@ cask "tatamio" do
   desc "Tiling window manager for macOS with snap zones, workspaces and Portal"
   homepage "https://tatamio.app"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Tatamio.app"
 
