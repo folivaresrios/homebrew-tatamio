@@ -4,10 +4,16 @@ cask "tatamio" do
 
   url "https://tatamio.app/downloads/Tatamio-#{version}.dmg"
   name "Tatamio"
-  desc "Tiling window manager for macOS with snap zones, workspaces and Portal"
-  homepage "https://tatamio.app"
+  desc "Tiling window manager with snap zones, workspaces and a screen-share portal"
+  homepage "https://tatamio.app/"
 
-  depends_on macos: :sonoma
+  livecheck do
+    url "https://tatamio.app/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "Tatamio.app"
 
@@ -16,5 +22,8 @@ cask "tatamio" do
   zap trash: [
     "~/.tatami",
     "~/Library/Application Support/app.tatamio",
+    "~/Library/Caches/app.tatamio.mac",
+    "~/Library/HTTPStorages/app.tatamio.mac",
+    "~/Library/Preferences/app.tatamio.mac.plist",
   ]
 end
